@@ -6,7 +6,8 @@ set(DTC_OVERLAY_FILE stm32u5.overlay)
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 project(shell_module)
 
-target_sources(app PRIVATE src/main.c src/test_module.c src/misc_cmd.c src/gpio_cmd.c)
+target_sources(app PRIVATE src/main.c src/test_module.c src/misc_cmd.c)
 target_sources_ifdef(CONFIG_SHELL_DYNAMIC_CMDS app PRIVATE src/dynamic_cmd.c)
 target_sources_ifdef(CONFIG_SHELL_BACKEND_SERIAL app PRIVATE src/uart_reinit.c)
 target_sources_ifdef(CONFIG_SHELL_START_OBSCURED app PRIVATE src/login_cmd.c)
+

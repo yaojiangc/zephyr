@@ -5,3 +5,50 @@
         led2 = &red_led_1;
 	};
 };
+
+&i2c1 {
+    status = "okay";
+    scl-gpios = <&gpiob 8 GPIO_OPEN_DRAIN>; 
+    sda-gpios = <&gpiob 9 GPIO_OPEN_DRAIN>; 
+    label = "i2c_pb89";
+};
+
+&gpioa {
+    label = "GPIOA";
+};
+
+&gpiob {
+    label = "GPIOB";
+};
+
+&gpioc {
+    label = "GPIOC";
+};
+
+&gpiod {
+    label = "GPIOD";
+};
+
+&gpioe {
+    label = "GPIOE";
+};
+
+&gpiof {
+    label = "GPIOF";
+};
+
+&gpiog {
+    label = "GPIOG";
+};
+
+&gpioh {
+    label = "GPIOH";
+};
+
+&gpioi {
+    label = "GPIOI";
+};
+
+&gpioj {
+    label = "GPIOJ";
+};
